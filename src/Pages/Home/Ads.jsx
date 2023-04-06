@@ -16,6 +16,10 @@ const adsElement=[
      {
         imageUrl:"https://c4.wallpaperflare.com/wallpaper/388/726/456/laptop-backgrounds-nature-images-1920x1200-wallpaper-preview.jpg"
      },
+     {
+        imageUrl:"https://wallpapers.com/images/featured/autumn-kquin5jg1dtbyxgc.jpg"
+     },
+
 
 ]
 
@@ -27,7 +31,7 @@ const Ads = () => {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -52,6 +56,7 @@ export default Ads;
 
 //https://wallpapers.com/images/featured/ztbad1qj8vdjqe0p.jpg
 //https://upload.wikimedia.org/wikipedia/commons/a/a2/1121098-pink-nature-wallpaper-1920x1080-lockscreen.jpg
+//https://wallpapers.com/images/featured/autumn-kquin5jg1dtbyxgc.jpg
 
 const AdUnit = ({imageUrl,id})=>(
 
