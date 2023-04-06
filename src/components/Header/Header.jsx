@@ -14,13 +14,13 @@ const Header = () => {
        <div className='flex items-center'>
         <IconButton sx={{color:"#4b19ee"}}>
         <MenuIcon sx={{
-                color:"#4b19ee",
+                color:"#4b19ee"
             }}/>
         </IconButton>
             
             <h1 className="ml-2 text-sm font-bold">Udesh<span className="ml-2 text-[#4b19ee]">DEV</span></h1>
             <div className=" overflow-hidden ml-2 flex items-center rounded-full bg-[#5262f4]">
-                <input type="text" placeholder="Search" className="ml-1  p-2 outline-none font-semibold text-sm w-[200px] bg-inherit"/>
+                <input type="text" placeholder="Search" className=" hidden sm:inline-block ml-1  p-2 outline-none font-semibold text-sm w-[200px] bg-inherit"/>
                 <IconButton>
                     <SearchIcon className='text-gray-400'/>
                 </IconButton>
