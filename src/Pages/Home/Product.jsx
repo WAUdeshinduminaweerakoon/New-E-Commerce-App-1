@@ -1,12 +1,13 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
-import { Grid, Pagination } from "swiper";
+import { Grid, Pagination,Mousewheel, Keyboard } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
 import { IconButton } from "@mui/material";
+import './style.css'
 
 
 
@@ -20,28 +21,28 @@ import { IconButton } from "@mui/material";
         imageUrl:"https://w0.peakpx.com/wallpaper/265/481/HD-wallpaper-nature.jpg" ,price : "300",productTitle:"product title 2"
     },
         {
-        imageUrl:"https://wallpapers.com/images/featured/autumn-kquin5jg1dtbyxgc.jpg" ,price : "200",productTitle:"product title 1"
+        imageUrl:"https://wallpapers.com/images/featured/autumn-kquin5jg1dtbyxgc.jpg" ,price : "200",productTitle:"product title 3"
     },
         {
-        imageUrl:"https://w0.peakpx.com/wallpaper/265/481/HD-wallpaper-nature.jpg" ,price : "300",productTitle:"product title 2"
+        imageUrl:"https://w0.peakpx.com/wallpaper/265/481/HD-wallpaper-nature.jpg" ,price : "300",productTitle:"product title 4"
     },
         {
-        imageUrl:"https://wallpapers.com/images/featured/autumn-kquin5jg1dtbyxgc.jpg" ,price : "200",productTitle:"product title 1"
+        imageUrl:"https://wallpapers.com/images/featured/autumn-kquin5jg1dtbyxgc.jpg" ,price : "200",productTitle:"product title 5"
     },
         {
-        imageUrl:"https://w0.peakpx.com/wallpaper/265/481/HD-wallpaper-nature.jpg" ,price : "300",productTitle:"product title 2"
+        imageUrl:"https://w0.peakpx.com/wallpaper/265/481/HD-wallpaper-nature.jpg" ,price : "300",productTitle:"product title 6"
     },
         {
-        imageUrl:"https://wallpapers.com/images/featured/autumn-kquin5jg1dtbyxgc.jpg" ,price : "200",productTitle:"product title 1"
+        imageUrl:"https://wallpapers.com/images/featured/autumn-kquin5jg1dtbyxgc.jpg" ,price : "200",productTitle:"product title 7"
     },
         {
-        imageUrl:"https://w0.peakpx.com/wallpaper/265/481/HD-wallpaper-nature.jpg" ,price : "300",productTitle:"product title 2"
+        imageUrl:"https://w0.peakpx.com/wallpaper/265/481/HD-wallpaper-nature.jpg" ,price : "300",productTitle:"product title 8"
     },
         {
-        imageUrl:"https://wallpapers.com/images/featured/autumn-kquin5jg1dtbyxgc.jpg" ,price : "200",productTitle:"product title 1"
+        imageUrl:"https://wallpapers.com/images/featured/autumn-kquin5jg1dtbyxgc.jpg" ,price : "200",productTitle:"product title 9"
     },
         {
-        imageUrl:"https://w0.peakpx.com/wallpaper/265/481/HD-wallpaper-nature.jpg" ,price : "300",productTitle:"product title 2"
+        imageUrl:"https://w0.peakpx.com/wallpaper/265/481/HD-wallpaper-nature.jpg" ,price : "300",productTitle:"product title 10"
     },
 
 ];
@@ -56,11 +57,14 @@ const Product = ({title,rowsCount,slidesPerView}) => {
         grid={{
           rows: Number(rowsCount),
         }}
-        spaceBetween={30}
+        spaceBetween={10}
         pagination={{
-          clickable: true,
+           
+           clickable: true,
         }}
-        modules={[Grid, Pagination]}
+        keyboard={true}
+        mousewheel={true}
+        modules={[Grid, Pagination,Mousewheel, Keyboard]}
        
       >
         {productArr.map(({imageUrl,price,productTitle},index)=>(
@@ -87,6 +91,7 @@ const ProductUnit=({imageUrl,price,productTitle,id})=>(
         padding:'4px',
         borderRadius:'5px',
         color:"#4b19ee",
+        marginBottom :'40px',
     }}>
         <div className="w-full">
             <img src={imageUrl} alt={`product_unit_${id}`} className="w-full object-contain" />
