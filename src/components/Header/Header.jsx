@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 
 const Header = () => {
-    const[ isSearch ,setInSearch] = useState(false)
+    const[isSearch, setIsSearch] = useState(false);
   return (
     <header className=" fixed top-0 left-0 z-[100] w-full py-5 px-2 bg-my-background flex items-center justify-between drop-shadow-header-shadow">
        {/* header left  */}
@@ -25,10 +25,15 @@ const Header = () => {
                 <input type="text"
                  placeholder="Search"
                  style={{
-                    display : window.innerWidth <640 ?isSearch ? "inline-black":"none":"inline-block",
+                    display :
+                    window.innerWidth < 640
+                    ? isSearch
+                    ? "inline-block"
+                    :"none"
+                    :'inline-block',
                  }}
-                 className = " hidden sm:inline-block ml-1 outline-none font-semibold p-2 text-sm w-[200px] bg-inherit"/>
-                <IconButton onClick = {() => setInSearch(true)}>
+                 className=" hidden sm:inline-block ml-1  p-2 outline-none font-semibold text-sm w-[200px] bg-inherit"/>
+                <IconButton onClick={()=>setIsSearch(true)}>
                     <SearchIcon className='text-gray-400'/>
                 </IconButton>
             </div>
