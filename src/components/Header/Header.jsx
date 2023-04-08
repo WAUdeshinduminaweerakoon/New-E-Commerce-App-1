@@ -21,7 +21,14 @@ const Header = () => {
             }}/>
         </IconButton>
             
-            <h1 className=" ml-2 text-sm font-bold">Udesh<span className=" text-[#4b19ee]" >DEV</span>
+            <h1  style={{
+                    display :
+                    window.innerWidth < 640
+                    ? isSearch
+                    ? "none"
+                    :"inline-block"
+                    :"inline-block",
+                 }} className=" ml-2 text-sm font-bold">Udesh<span className=" text-[#4b19ee]" >DEV</span>
             </h1>
             <div className=" overflow-hidden ml-2 flex items-center rounded-full bg-[#5262f4]">
                 <input type="text"
@@ -32,7 +39,7 @@ const Header = () => {
                     ? isSearch
                     ? "inline-block"
                     :"none"
-                    :'inline-block',
+                    :"inline-block",
                  }}
                  className=" hidden sm:inline-block ml-1  p-2 outline-none font-semibold text-sm w-[200px] bg-inherit"/>
                 <IconButton onClick={()=>{
