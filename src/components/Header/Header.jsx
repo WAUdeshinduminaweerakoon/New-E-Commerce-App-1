@@ -26,15 +26,15 @@ const Header = () => {
                     window.innerWidth < 640
                     ? isSearch
                     ? "none"
-                    :"inline-block"
-                    :"inline-block",
-                 }} className=" ml-2 text-sm font-bold">Udesh<span className=" text-[#4b19ee]" >DEV</span>
+                    : "inline-block"
+                    : "inline-block",
+                 }} className=" ml-2 text-sm font-bold">Udesh<span className=" text-[#4b19ee]" >DEV </span>
             </h1>
             <div  style={{
                     backgroundColor :
                     window.innerWidth < 640
                     ? isSearch
-                    ? "none"
+                    ? "#5262f4"
                     :"inherit"
                     :'#5262f4',
                  }} className=" overflow-hidden ml-2 flex items-center rounded-full bg-[#5262f4]">
@@ -54,7 +54,13 @@ const Header = () => {
                         setIsSearch(!isSearch)
                     }
                 }}>
-                    <SearchIcon className='text-gray-400'/>
+                    {<SearchIcon  sx={{color: window.innerWidth < 640
+                    ? isSearch
+                    ? "rgb(156 163 178)"
+                    :"inherit"
+                    :"rgb(156 163 178)",
+                }}
+                     className="text-gray-500  "/> }
                 </IconButton>
             </div>
         </div>

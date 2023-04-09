@@ -6,7 +6,7 @@ import { Grid, Pagination,Mousewheel, Keyboard } from "swiper";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
-import { IconButton } from "@mui/material";
+import { IconButton,Rating } from "@mui/material";
 import './style.css'
 
 
@@ -96,6 +96,10 @@ const ProductUnit=({imageUrl,price,productTitle,id})=>(
         <div className="w-full">
             <img src={imageUrl} alt={`product_unit_${id}`} className="w-full object-contain" />
             <h3 className="text-sm font-semibold text-stone-900">{productTitle}</h3>
+            <Rating 
+             name={imageUrl}
+             value={3.3}
+             precision={0.1}/>
             <h3 className="text-stone-900 font-bold text-lg">Rs. {price} /=</h3>
 
         </div>
