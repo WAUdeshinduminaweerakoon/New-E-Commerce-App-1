@@ -47,6 +47,7 @@ const Header = () => {
                     ? "inline-block"
                     :"none"
                     :"inline-block",
+                    transition: "all 400ms ease-in-out",
                  }}
                  className=" hidden sm:inline-block ml-1  p-2 outline-none font-semibold text-sm w-[200px] bg-inherit"/>
                 <IconButton onClick={()=>{

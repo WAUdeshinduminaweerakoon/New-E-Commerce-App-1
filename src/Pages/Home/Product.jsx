@@ -50,14 +50,16 @@ import './style.css'
 
 const Product = ({title,rowsCount,slidesPerView}) => {
   return (
-    <section  className="w-full mt-6 drop-shadow-product-shadow">
-        <h1 className="text-lg font-bold mb-3">{title}</h1>
+    <section style={{
+        boxShadow:"rgba(30, 8, 108, 0.24) 0px 3px 8px",
+    }} className="w-full mt-6 p-2">
+        <h1 className="text-lg font-bold mb-3 mt-2 ml-2 ">{title}</h1>
         <Swiper
-        slidesPerView={Number(slidesPerView)}
+        slidesPerView={3}
         grid={{
-          rows: Number(rowsCount),
+          rows: 1,
         }}
-        spaceBetween={10}
+        spaceBetween={30}
         pagination={{
            
            clickable: true,
@@ -74,6 +76,7 @@ const Product = ({title,rowsCount,slidesPerView}) => {
                     price={price}
                     productTitle={productTitle}
                     id={index}
+                    
                 />
             </SwiperSlide>
             )
