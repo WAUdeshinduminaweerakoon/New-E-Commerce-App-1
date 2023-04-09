@@ -50,7 +50,7 @@ import './style.css'
 
 const Product = ({title,rowsCount,slidesPerView}) => {
   return (
-    <section className="w-full mt-6">
+    <section  className="w-full mt-6 drop-shadow-product-shadow">
         <h1 className="text-lg font-bold mb-3">{title}</h1>
         <Swiper
         slidesPerView={Number(slidesPerView)}
@@ -99,7 +99,9 @@ const ProductUnit=({imageUrl,price,productTitle,id})=>(
             <Rating 
              name={imageUrl}
              value={3.3}
-             precision={0.1}/>
+             precision={0.1}
+             size="small"
+             readOnly/>
             <h3 className="text-stone-900 font-bold text-lg">Rs. {price} /=</h3>
 
         </div>
