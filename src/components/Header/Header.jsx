@@ -69,7 +69,7 @@ const Header = () => {
        {/* hedar right  */}
       <IconButton>
         <div className="relative rounded-full p-1" >
-            <ShoppingCartOutlinedIcon/>
+            <ShoppingCartOutlinedIcon className="text-black"/>
             <div className=" absolute top-[2px]  right-0 text-[7px] font-semibold text-white  bg-black flex items-center justify-center  w-3 h-3 rounded-full" >
                 2
             </div>
