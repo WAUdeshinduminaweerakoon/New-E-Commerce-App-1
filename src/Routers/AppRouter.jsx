@@ -5,6 +5,7 @@ import Home from "../Pages/Home/Home";
 import User from "../Pages/User/User";
 import Login from "../Pages/Login/Login";
 import UserProtected from "./UserProtected";
+import { Category } from "@mui/icons-material";
 
 const router = createBrowserRouter([
     {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
             {
                 index : true,
                 element:<Home/>
+            },
+            {
+                path : "category",
+                element:<Category/>,
             },
             {
                 element : <UserProtected/>,
