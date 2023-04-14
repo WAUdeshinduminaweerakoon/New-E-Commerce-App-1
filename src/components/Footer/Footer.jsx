@@ -47,7 +47,7 @@ const FooterIcon = ({Icon, iconText ,clickFun})=>{
   }
   
   return(
-    <Link to={iconText==="Home"?"/":`/${String(iconText).toLowerCase()}`}>
+    <Link to={iconText==="Home"?'/':`/${String(iconText).toLowerCase()}`}>
 <IconButton sx={{
             padding:'4px',
             paddingTop:'0px',

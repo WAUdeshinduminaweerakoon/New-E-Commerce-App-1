@@ -5,7 +5,8 @@ import Home from "../Pages/Home/Home";
 import User from "../Pages/User/User";
 import Login from "../Pages/Login/Login";
 import UserProtected from "./UserProtected";
-import { Category } from "@mui/icons-material";
+import Category from "../Pages/Category/Category";
+
 
 const router = createBrowserRouter([
     {
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
         children : [
             {
                 index : true,
-                element:<Home/>
+                element:<Home/>,
             },
             {
                 path : "category",
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
                 children:[
                     {
                         path:'user',
-                        element : <User/>
+                        element : <User/>,
 
                     },
                 ],
@@ -36,11 +37,16 @@ const router = createBrowserRouter([
         path:"/profile",
         element:<Login/>,
     },
+    {
+        path : "/category",
+                element:<Category/>,
+    },
+
 ]);
 
 const AppRouter = () => {
-    return <RouterProvider router  ={router}/>
-}
+    return <RouterProvider router  ={router}/>;
+};
 
 
 

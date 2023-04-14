@@ -9,4 +9,4 @@ const Loding = () => {
   );
 };
 
-export default Loding
+export default Loding;
