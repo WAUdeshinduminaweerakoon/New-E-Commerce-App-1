@@ -31,12 +31,19 @@ const Category = () => {
 
 const CategoryItems = ()=>(
 <IconButton sx={{
-        color:'blue'
+        color:'gray',
+        padding:'1px',
+        borderRadius:"6px",
     }}>
 
-<div className="w-full rounded-md border -2 border-pink-600 flex flex-col items-center">
-    <img src="https://wallpapers.com/images/featured/autumn-kquin5jg1dtbyxgc.jpg" alt="categoryitem"/>
-    <h2>Category Name </h2>
+<div
+  style={{
+    boxShadow:"rgba(30, 8, 108, 0.24) 0px 3px 8px",
+}}
+className="m-1 w-full rounded-md border -2 border-pink-600 flex flex-col items-center">
+    <img src="https://wallpapers.com/images/featured/autumn-kquin5jg1dtbyxgc.jpg" alt="categoryitem"
+    className=" rounded-full w-[50px] h-[50px]"/>
+    <h2 className=" text-[10px] text-black font-bold ">Category Name </h2>
     
 
 </div>
