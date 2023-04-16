@@ -1,26 +1,32 @@
 import { IconButton } from "@mui/material";
+import { Link } from "react-router-dom";
 
 
 const categoryArr = [
     {
         imageUrl : 'https://wallpapers.com/images/featured/autumn-kquin5jg1dtbyxgc.jpg',
-        title : 'Category Title 1'
+        title : 'Category Title 1',
+        CategoryId:'category1'
     },
     {
         imageUrl : 'https://wallpapers.com/images/featured/autumn-kquin5jg1dtbyxgc.jpg',
-        title : 'Category Title 2'
+        title : 'Category Title 2',
+         CategoryId:'category2'
     },
     {
         imageUrl : 'https://wallpapers.com/images/featured/autumn-kquin5jg1dtbyxgc.jpg',
-        title : 'Category Title 3'
+        title : 'Category Title 3',
+         CategoryId:'category3'
     },
     {
         imageUrl : 'https://wallpapers.com/images/featured/autumn-kquin5jg1dtbyxgc.jpg',
-        title : 'Category Title 4'
+        title : 'Category Title 4',
+         CategoryId:'category4'
     },
     {
         imageUrl : 'https://wallpapers.com/images/featured/autumn-kquin5jg1dtbyxgc.jpg',
-        title : 'Category Title 5'
+        title : 'Category Title 5',
+         CategoryId:'category5'
     },
 ]
 
@@ -35,7 +41,7 @@ const Category = () => {
         }} className="w-full p-2 ">
             <h1 className="text-lg font-bold mb-3 mt-2 ml-2 ">Main Categories</h1>
                     <div className="grid grid-cols-3 grid-flow-row-[auto] gap-5">
-                        {categoryArr.map(({imageUrl,title},index)=><CategoryItems key= {index} imageUrl={imageUrl} title={title}/>)}
+                        {categoryArr.map(({imageUrl,title,CategoryId},index)=><CategoryItems key= {index} imageUrl={imageUrl} title={title} CategoryId={CategoryId}/>)}
 
                     
                     </div>
@@ -47,7 +53,8 @@ const Category = () => {
 
 export default Category;
 
-const CategoryItems = ({imageUrl,title})=>(
+const CategoryItems = ({imageUrl,title,CategoryId})=>(
+    <Link to={`/category/${CategoryId}`}>
 <IconButton sx={{
         color:'gray',
         padding:'1px',
@@ -65,5 +72,5 @@ className="m-1 w-full py-6 px-3 mt-3 rounded-md  flex flex-col items-center">
     
 
 </div>
-</IconButton>
+</IconButton></Link>
 );
