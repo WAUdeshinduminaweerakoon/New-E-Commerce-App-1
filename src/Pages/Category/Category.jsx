@@ -1,7 +1,9 @@
+import { IconButton } from "@mui/material";
 
 
 const Category = () => {
   return (
+    
     <div className="px-5 py-[100px] w-full h-screen overflow-y-scroll">
             <section
              style={{
@@ -22,16 +24,23 @@ const Category = () => {
                     
                     </div>
             </section>
-        Category
     </div>
+   
   );
 };
 
-const CategoryItems = ()=><div className="w-full rounded-md border -2 border-pink-600 flex flex-col items-center">
+const CategoryItems = ()=>(
+<IconButton sx={{
+        color:'blue'
+    }}>
+
+<div className="w-full rounded-md border -2 border-pink-600 flex flex-col items-center">
     <img src="https://wallpapers.com/images/featured/autumn-kquin5jg1dtbyxgc.jpg" alt="categoryitem"/>
-    <h2>Category</h2>
-    <h2>Name</h2>
+    <h2>Category Name </h2>
+    
 
 </div>
+</IconButton>
+);
 
 export default Category;
