@@ -41,7 +41,12 @@ const Category = () => {
         }} className="w-full p-2 ">
             <h1 className="text-lg font-bold mb-3 mt-2 ml-2 ">Main Categories</h1>
                     <div className="grid grid-cols-3 grid-flow-row-[auto] gap-5">
-                        {categoryArr.map(({imageUrl,title,CategoryId},index)=><CategoryItems key= {index} imageUrl={imageUrl} title={title} CategoryId={CategoryId}/>)}
+                        {categoryArr.map(({imageUrl,title,CategoryId},index)=>
+                        <CategoryUnitItems 
+                        key= {index} 
+                        imageUrl={imageUrl} 
+                        title={title} 
+                        CategoryId={CategoryId}/>)}
 
                     
                     </div>
@@ -53,7 +58,7 @@ const Category = () => {
 
 export default Category;
 
-const CategoryItems = ({imageUrl,title,CategoryId})=>(
+const CategoryUnitItems = ({imageUrl,title,CategoryId})=>(
     <Link to={`/category/${CategoryId}`}>
 <IconButton sx={{
         color:'gray',
